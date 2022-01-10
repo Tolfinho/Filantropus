@@ -1,0 +1,708 @@
+/** Scroll Bar **/
+
+::-webkit-scrollbar {
+    background: rgba(7, 157, 226, 0.5);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(#311B92 0%, #04B2D9 100%);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: rgb(105, 3, 105);
+}
+
+/** General Styles **/
+* {
+    font-family: "Poppins";
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+:target {
+    scroll-margin-top: 3em;
+}
+
+.row {
+    margin: 0;
+}
+
+.btn-primary {
+    background-color: #311B92;
+    border: 2px solid #311B92;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: #311B92;
+    border: 2px solid #311B92;
+}
+
+.btn-primary:active {
+    box-shadow: none!important;
+    background-color: #311B92;
+    border-color: #311B92;
+    color: white;
+}
+
+.btn-primary:focus {
+    box-shadow: none!important;
+    background-color: #311B92;
+    border-color: #311B92;
+    color: white;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 2px 8px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+} 
+
+/** Fundo do Header para diferentes páginas **/
+.header-bg-transparent {
+    background-color: transparent;
+}
+
+.header-bg-blue {
+    background-color: rgba(7, 157, 226, 1);
+}
+
+.header-bg-red {
+    background-color: red;
+}
+
+/** Navbar **/
+.active {
+    position: fixed!important;
+    top: 0;
+    width: 100%;
+    background-color: rgba(7, 157, 226, 0.7)!important;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}
+
+header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: all ease-out 0.5s;
+    z-index: 999999;
+}
+
+#navbar {
+    justify-content: space-between;
+    padding: 5px 80px;
+    z-index: 999999;
+}
+
+#navbar img {
+    width: 300px;
+}
+
+#navbar a {
+    color: white;
+    padding: 0 15px;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+#navbar a:hover {
+    color: #311B92;
+    padding: 0 15px;
+    transition: 0.3s;
+}
+
+#navbar .navbar-brand {
+    font-size: 50px;
+    font-weight: 500;
+    color: #311B92;
+}
+
+/** HOME **/
+/* banner principal */
+#banner-container {
+    position: relative;
+    background: linear-gradient(rgba(7, 157, 226, 0.6), rgba(7, 157, 226, 0.6)), url('../images/banner-home.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 300px;
+    text-align: center;
+}
+
+#banner-container h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+#banner-container h2 {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 80px;
+}
+
+#banner-container a {
+    padding: 15px;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+#banner-container a.create-event-btn {
+    background: transparent;
+    color: #311B92;
+    animation: go-right 2s;
+}
+
+#banner-container a.create-event-btn:hover {
+    background: #311B92;
+    color: white;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+#banner-container a.all-events-btn { animation: go-left 2s; }
+
+#banner-container a.all-events-btn:hover {
+    background: #311B92;
+    color: white;
+    border-color: #311B92;
+    transform: scale(1.1);
+    transition: 0.3s;   
+}
+
+#scrolldown-icon {
+    position: absolute;
+    bottom: 100px;
+    margin-left: 30px;
+    animation: go-down 2s;
+}
+
+/* seção sobre */
+#container-sobre {
+    visibility: hidden;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#container-sobre .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container-sobre .sobre-txt-container {
+    padding-right: 6%;
+}
+
+#container-sobre img {
+    max-width: 95%;
+}
+
+#container-sobre h3 {
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+#container-sobre h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+#container-sobre hr {
+    width: 200px;
+    height: 2px;
+    color: #311B92;
+    opacity: 1;
+}
+
+#container-sobre button {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.3s;
+    animation: fade-in 2s;
+}
+
+#container-sobre button:hover {
+    transform: scale(1.1);
+}
+
+/* seção serviços */
+#container-servicos {
+    visibility: hidden;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+#container-servicos h1 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 50px;
+    color: white;
+}
+
+#container-servicos hr {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 200px;
+    height: 3px;
+    color: rgba(0, 0, 0, 1);
+    opacity: 1;
+}
+
+#container-servicos .cards-container {
+    padding: 100px 150px;
+    background: linear-gradient(rgba(133, 18, 170, 0.4), rgba(133, 18, 170, 0.4)), url('../images/teste.jpg') no-repeat fixed;
+}
+
+#container-servicos .servicos-cards {
+    background-color: lightgray;
+    border: 2px solid rgba(113, 7, 147, 1);
+    margin: 0 0.5%;
+    padding: 10px;
+    background: linear-gradient(300deg, rgba(113, 7, 147, 1) 0%, rgba(203, 88, 240, 1) 50%, rgba(133, 18, 170, 1) 100%);
+}
+
+#container-servicos .servicos-cards:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#container-servicos .servicos-cards img {
+    max-width: 100%;
+    margin-bottom: 30px;
+}
+
+#container-servicos .servicos-cards h4 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#container-servicos .servicos-cards p {
+    text-align: center;
+}
+
+/** Lista de Eventos **/
+#events-container { padding: 100px; min-height: 80vh;}
+
+#events-container h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+#cards-contanier { display: flex; }
+
+#events-container .card {
+    flex: 1 1 24%;
+    max-width: 24%;
+    padding: 0;
+    margin: 0.5%;
+    border-radius: 15px;
+}
+
+#cards-container img {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#cards-container .card-body { padding: 40px; }
+
+/** Eventos Flash Massages **/
+.msg {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+    margin: auto 0;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+/** Show Eventos **/
+#banner-all-events {
+    background: linear-gradient(rgba(7, 157, 226, 0.6), rgba(7, 157, 226, 0.6)), url('/images/teste.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    padding-top: 200px;
+    text-align: center;
+}
+
+#banner-all-events h1{
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-weight: 500;
+    color: white;
+    animation: go-left 1s;
+}
+
+#banner-all-events input {
+    max-width: 75%;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(7, 157, 226);
+    font-size: 18px;
+    animation: go-up 1s;
+}
+
+.show-container { padding: 60px 0; padding-top: 180px;}
+
+#image-container img {
+    border-radius: 30px;
+    margin-bottom: 30px;
+    min-width: 100%;
+}
+
+#info-container { padding: 0 30px; }
+
+#info-container h5 { font-size: 25px; }
+
+#info-container p { font-size: 20px; }
+
+/** DASHBOARD **/
+.dashboard-container { padding-top: 150px; }
+
+.personal-info-container {
+    padding: 50px;
+    border: 2px solid #311B92;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.personal-info-container .profile-edit-btn { margin-left: 25px; }
+
+.personal-info-container h1 { margin-bottom: 40px; }
+
+.personal-info-container p { margin-bottom: 30px; font-size: 18px;}
+
+.dashboard-title-container{ margin-bottom: 40px; }
+
+.dashboard-table-container {  
+    margin: 50px auto;
+    padding: 50px;
+    border: 2px solid #311B92;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-table-container form { display: inline-block; }
+
+.dashboard-table-container form button:hover{
+    color: red;
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.dashboard-table-container .edit-btn {
+    background: #311B92;
+    color: white;
+    border: 1px solid #311B92;
+}
+
+.dashboard-table-container .edit-btn:hover{
+    color: #311B92;
+    background-color: transparent;
+}
+
+.dashboard-table-container .toogleStatus {
+    background: #04B2D9;
+    color: white;
+    border: 1px solid #04B2D9;
+}
+
+.dashboard-table-container .toogleStatus:hover {
+    background: transparent;
+    color: #04B2D9;
+    border: 1px solid #04B2D9;
+}
+
+/** Página Editar Evento **/
+.img-preview {
+    width: 200px;
+    margin-top: 20px;
+}
+
+/** Página criar evento **/
+#page-container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 120px;
+    background: linear-gradient(90deg, #2384f3 0%, #007be0 100%);
+}
+
+#event-create-container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+#event-create-container h1 {
+    color: black;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+#event-create-container input,
+#event-create-container textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+#event-create-container input:focus,
+#event-create-container textarea:focus {
+    box-shadow: 0px 0px 20px lightsky#04B2D9;
+    border: 2px solid lightsky#04B2D9;
+}
+
+#event-create-container input[type=file] { visibility: hidden; }
+
+#event-create-container .img-btn {
+    color: white;
+    background: #20b2aa;
+    border: 2px solid #20b2aa;
+    font-size: 18px;
+}
+
+#event-create-container .img-btn:hover {
+    background: #008080;
+    border: 2px solid #008080;
+}
+
+#event-create-container p {
+    margin-bottom: 0px;
+}
+
+#event-create-container .img-btn p {
+    font-size: 12px;
+}
+
+#event-create-container .create-btn {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+/* Páginas de Login */
+.auth-title {
+    margin-top: 8px;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-weight: 400;
+    color: black;
+}
+
+/*
+.auth-container {
+    background: linear-gradient(90deg, #2384f3 0%, #007be0 100%);
+}*/
+
+div.auth-card {
+    background-color: rgba(255, 255, 255, 0.5)!important;
+    padding: 15px!important;
+    max-width: 475px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    box-shadow: 10px 10px 15px 10px rgba(100, 100, 100, 0.1);
+    border-radius: 15px;
+}
+
+form.auth-form {
+    padding: 0px!important;
+    margin: 0px!important;
+}
+
+div .auth-inputs {
+   padding: 10px 20px;
+   box-shadow: none!important; 
+   border-bottom: 1px solid rgba(0,0,0,0.2);
+   border-radius: 5px;
+   background-color: rgba(255, 255, 255, 0.5)!important;
+}
+
+.auth-button {
+    color: white!important;
+    background: #311B92!important;
+    border: 2px solid #311B92!important;
+    padding: 10px!important;
+    font-size: 15px!important;
+    font-weight: 600!important;
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    color: #311B92!important;
+    background: transparent!important;
+    border: 2px solid #311B92!important;
+}
+
+.back-to-menu-link {
+    position: absolute;
+    left: 20px;
+    color: black;
+}
+
+.back-to-menu-link:hover {
+    color: #311B92;
+    transition: 0.3s;
+}
+
+.back-to-menu-link a:hover {
+    color: #311B92;
+    transition: 0.3s;
+}
+
+.back-to-menu-link ion-icon{
+    margin-bottom: -2.8px;
+}
+
+/* Página dos Participantes do Meu Evento */
+section#participants-container {
+    background: linear-gradient(#04B2D9, #311B92);
+    min-height: 100vh;
+}
+
+#participants {
+    padding-top: 150px;
+}
+
+#participants h1 {
+    color: white;
+}
+
+#participants div div {
+    background: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+#participants div div:hover {
+    border: 2px solid black;
+}
+
+#participants button {
+    background: red;
+    border: 2px solid red;
+    color: white;
+}
+
+#participants button:hover {
+    background: transparent;
+    color: red;
+}
+
+/** Footer **/
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: #311B92;
+    color: white;
+    padding: 15px;
+    border-top: 1px solid rgba(167, 92, 238, 0.03);
+}
+
+footer p { margin-bottom: 0; }
+
+footer #author-link {
+    text-decoration: none;
+    color: white;
+}
+
+footer #author-link:hover {
+    color: lightsky#04B2D9;
+    transition: 0.3s;
+}
+
+
+/** ANIMAÇÕES **/
+@keyframes go-right {
+    0% {
+        transform: translateX(-400px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes go-left {
+    0% {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes go-up {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes go-down {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
