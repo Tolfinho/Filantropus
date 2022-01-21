@@ -19,8 +19,8 @@ class EventController extends Controller
         $search = request('search');
 
         if($search){
-            $events = Event::where('title', 'like', '%'.$search.'%')
-            ->orwhere('local', 'like', '%'.$search.'%')->get();
+            $events = Event::where('title', 'ILIKE', '%'.$search.'%')
+            ->orwhere('local', 'ILIKE', '%'.$search.'%')->get();
         } else {
             $events = Event::all();
         }
