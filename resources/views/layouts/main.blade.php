@@ -44,7 +44,7 @@
                             <a href="/#all" class="nav-link">Ações Comunitárias</a>
                         </li>
                         <li class="nav-item">
-                            <a href="/events/create" class="nav-link">Criar Evento</a>
+                            <a href="/events/create" class="nav-link">Criar Ação</a>
                         </li>
                         @auth
                         <li class="nav-item">

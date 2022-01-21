@@ -28,7 +28,7 @@
            
 
         @else 
-        <h1>O seu evento não possui nenhum participante ainda! Clique aqui para convidar!</h1>
+        <h1 style="font-size: 22px;">O seu evento não possui nenhum participante ainda!</h1>
         @endif
     </div>
 </section>

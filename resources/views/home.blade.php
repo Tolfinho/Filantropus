@@ -15,7 +15,7 @@
 </div>
 <div id="all"></div>
 <div id="events-container" class="col-md-12">
-    <h1>Todos as Ações Voluntárias:</h1>
+    <h1>Todas as Ações Voluntárias:</h1>
     <form action="/" method="GET">
     <i class="fas fa-search" style="font-size: 22px; margin-right: 20px;"></i><input type="text" id="search" name="search" class="form-control" style="display: inline-block; width: 30%; padding: 10px 15px; margin-bottom: 20px;" placeholder="Pesquisar! (Cidade ou Nome de Evento)">
     </form>

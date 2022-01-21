@@ -3,7 +3,7 @@
 @section('content')
     <div id="page-container">
         <div id="event-create-container" class="col-md-6 offset-md-3">
-            <h1>Crie seu evento!</h1>
+            <h1>Crie sua Ação Comunitária!</h1>
             <form action="/events" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
@@ -22,7 +22,7 @@
                     <textarea class="form-control" name="requisitos" id="requisitos" placeholder="Quais os requisitos para o evento?" required  ></textarea>
                 </div>
                 <div class="form-group">
-                    <p>Escolha a imagem do seu evento:</p>
+                    <p>Escolha a imagem da sua ação:</p>
                     <label for="image" class="btn btn-primary img-btn">Upload<p>( Recommended size: 600px - 600px )</p></label>
                     <input type="file" id="image" name="image" class="from-control-file" required>
                 </div>
