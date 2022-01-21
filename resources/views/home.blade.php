@@ -47,7 +47,7 @@
     @elseif($cont >= 0 && !$search)
         <h5>Nenhum evento cadastrado! <a href="/events/create" style="color: #311B92;">Clique aqui para criar um evento!</a></h5>
     @else
-    <h1 style="font-size: 20px; margin-top: 20px;">Não encontramos nenhum resultado para: <b>{{ $search }}</b></h1><a href="/" style="padding: 10px 15px; background: #311B92; border: 1px solid #311B92; color: white; text-decoration: none; border-radius: 5px;">Ver Toas Publicações</a>
+    <h1 style="font-size: 20px; margin-top: 20px;">Não encontramos nenhum resultado para: <b>{{ $search }}</b></h1><a href="/" style="padding: 10px 15px; background: #311B92; border: 1px solid #311B92; color: white; text-decoration: none; border-radius: 5px;">Ver Todas Publicações</a>
     @endif
 </div>
 

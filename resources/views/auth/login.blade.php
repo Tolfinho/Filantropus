@@ -51,12 +51,6 @@
 
                     <div class="flex items-center justify-end mt-4">
                         <div class="back-to-menu-link"><ion-icon name="chevron-back-outline"></ion-icon><a href="/">Voltar!</a></div>
-                        @if (Route::has('password.request'))
-                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                                {{ __('Esqueceu sua senha?') }}
-                            </a>
-                        @endif
-                        
                         <x-jet-button class="ml-4 auth-button">
                             {{ __('Logar') }}
                         </x-jet-button>
