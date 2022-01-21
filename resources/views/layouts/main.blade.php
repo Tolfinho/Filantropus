@@ -33,7 +33,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="collapse navbar-collapse" id="navbar">
                     <a href="/" class="navbar-brand">
-                        <h1>FILANTROPUS</h1>
+                        <h1 style="font-weight: 600;">FILANTROPUS</h1>
                     </a>
                     <ul class="navbar-nav">
                         <li class="nav-item">

@@ -32,6 +32,7 @@
 
                 
                 <form method="POST" action="{{ route('login') }}" class="auth-form">
+                    <h1 class="auth-title">Login</h1>
                     @csrf
                     <div>
                         <input id="email" class="block mt-1 w-full auth-inputs" type="email" name="email" :value="old('email')" placeholder="Digite seu Email..." required autocomplete="off" />

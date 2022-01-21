@@ -133,8 +133,12 @@ header {
 
 #navbar .navbar-brand {
     font-size: 50px;
-    font-weight: 500;
-    color: #311B92;
+    color: white;
+    text-shadow: 2px 2px 0px #311B92;
+}
+
+#navbar .navbar-brand:hover {
+    text-shadow: 2px 2px 0px white;
 }
 
 /** HOME **/
@@ -514,7 +518,7 @@ header {
     margin-top: 8px;
     margin-bottom: 30px;
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 700;
     color: black;
 }
 
