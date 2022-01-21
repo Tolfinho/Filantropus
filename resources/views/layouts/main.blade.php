@@ -15,6 +15,7 @@
         <!-- CSS do Projeto -->
         <link rel="stylesheet" href="/css/style.css">
         <link rel="icon" href="{{ url('/images/favicon. png') }}">
+        <script src="https://kit.fontawesome.com/61b7997f9e.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
         <script src="/js/scripts.js"></script>
     </head>

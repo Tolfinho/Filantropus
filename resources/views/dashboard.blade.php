@@ -10,13 +10,13 @@
                 <div class="personal-info-data-container">
                     <div class="row">
                         <div class="col-md-4">
-                            <p>Nome: {{ $user->name }}</p>
-                            <p>Email: {{ $user->email }}</p>
-                            <p>WhatsApp: {{ $user->whatsapp }}</p>
+                            <p><i class="fas fa-angle-right" style="margin-right: 8px; color: #311B92;"></i>Nome: {{ $user->name }}</p>
+                            <p><i class="fas fa-angle-right" style="margin-right: 8px; color: #311B92;"></i>Email: {{ $user->email }}</p>
+                            <p><i class="fas fa-angle-right" style="margin-right: 8px; color: #311B92;"></i>WhatsApp: {{ $user->whatsapp }}</p>
                         </div>
                         <div class="col-md-4">
-                            <p>UF: {{ $user->uf }}</p>
-                            <p>Cidade: {{ $user->city }}</p>
+                            <p><i class="fas fa-angle-right" style="margin-right: 8px; color: #311B92;"></i>UF: {{ $user->uf }}</p>
+                            <p><i class="fas fa-angle-right" style="margin-right: 8px; color: #311B92;"></i>Cidade: {{ $user->city }}</p>
                         </div>
                     </div>
                 </div> 
@@ -119,7 +119,7 @@
                         </tbody>
                 </table>
                 @else
-                <h5>Vocênão está participando de nenhuma ação! <a href="/all">Ver Ações disponíveis!</a></h5>
+                <h5>Vocênão está participando de nenhuma ação! <a href="/#all">Ver Ações disponíveis!</a></h5>
                 @endif
         </div>
     </div>

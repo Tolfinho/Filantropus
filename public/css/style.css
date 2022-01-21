@@ -389,6 +389,22 @@ header {
 
 #info-container p { font-size: 20px; }
 
+#info-container .whatsapp-btn {
+    text-decoration: none; 
+    color: white; 
+    background-color: #25D366; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    border: 1px solid #25D366;
+    margin-left: 6px;
+}
+
+#info-container .whatsapp-btn:hover {
+    background-color: transparent;
+    color: #25D366;
+    transition: 0.4s;
+}
+
 /** DASHBOARD **/
 .dashboard-container { padding-top: 150px; }
 

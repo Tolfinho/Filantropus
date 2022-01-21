@@ -8,13 +8,24 @@ use App\Models\Event;
 
 use App\Models\User;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
 class EventController extends Controller
 {
     
     public function index(){
-        $events = Event::all();
 
-        return view('home', ['events' => $events]);
+        $search = request('search');
+
+        if($search){
+            $events = Event::where('title', 'like', '%'.$search.'%')
+            ->orwhere('local', 'like', '%'.$search.'%')->get();
+        } else {
+            $events = Event::all();
+        }
+
+        return view('home', ['events' => $events, 'search' => $search]);
     }
 
     public function create(){
