@@ -34,7 +34,6 @@
                     <div class="card col-md-4">
                         <img src="/images/events/{{ $event->image }}" alt="{{ $event->title }}" style="height: 250px;">
                         <div class="card-body"> 
-                            <p class="card-date">02/09/2021</p>
                             <h5 class="card-title">{{ $event->title }}</h5>
                             <p class="card-participantes">{{ count($event->users) }} Participantes</p>
                             <p class="card-local" style="margin-top: -10px;">{{ $event->local }}</p>
